@@ -1,0 +1,19 @@
+{
+  "name": "aliyun-sts",
+  "version": "1.0.0",
+  "description": "阿里云临时授权",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muchencute/aliyun-sts.git"
+  },
+  "author": "muchencute.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/muchencute/aliyun-sts/issues"
+  },
+  "homepage": "https://github.com/muchencute/aliyun-sts#readme"
+}
