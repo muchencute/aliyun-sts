@@ -22,8 +22,9 @@ class AliyunSTS {
      * @param roleArn
      * @param roleSessionName
      * @param durationSeconds
+     * @param callback 回调函数
      */
-    assumeRole(roleArn, roleSessionName, durationSeconds) {
+    assumeRole(roleArn, roleSessionName, durationSeconds, callback) {
         let url = 'https://sts.aliyuncs.com/?SignatureVersion=1.0';
         url += '&Format=JSON';
         url += `&Timestamp=${encodeURIComponent(moment.utc().format())}`;
@@ -40,10 +41,16 @@ class AliyunSTS {
         url += `&Signature=${encodeURIComponent(signedString)}`;
 
         http.get(url, function (resp) {
-            console.log('resp: ' + resp.statusCode);
-            resp.on('data', function (data) {
-                console.log('resp-data: ' + data);
-            });
+            if (resp.statusCode == 200) {
+                let entity = '';
+                resp.on('data', function (data) {
+                    entity += data;
+                }).on('end', function () {
+                    callback(resp.statusCode, JSON.parse(entity));
+                });
+            } else {
+                callback(status);
+            }
         }).on('error', function (error) {
             console.log(error.message);
         });
