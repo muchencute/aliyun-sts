@@ -19,6 +19,6 @@
   "dependencies": {
     "moment": "latest",
     "node-uuid": "latest",
-    "aliyun-utils": "latest"
+    "aliyun-utils": "1.0.2"
   }
 }
