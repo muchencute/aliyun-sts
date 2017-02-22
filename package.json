@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/muchencute/aliyun-sts/issues"
   },
-  "homepage": "https://github.com/muchencute/aliyun-sts#readme"
+  "homepage": "https://github.com/muchencute/aliyun-sts#readme",
+  "dependencies": {
+    "moment": "latest",
+    "node-uuid": "latest",
+    "aliyun-utils": "latest"
+  }
 }
