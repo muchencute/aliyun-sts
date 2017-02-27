@@ -5,7 +5,7 @@
 `npm install aliyun-sts`
 
 ## Demo
-```ecmascript 6
+```javascript
 const AliyunSTS = require('./index.js');
 const appKey = '< App Key >';
 const appSecret = '< App Secret >';
