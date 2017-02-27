@@ -6,7 +6,7 @@
 
 ## Demo
 ```javascript
-const AliyunSTS = require('./index.js');
+const AliyunSTS = require('aliyun-sts');
 const appKey = '< App Key >';
 const appSecret = '< App Secret >';
 
